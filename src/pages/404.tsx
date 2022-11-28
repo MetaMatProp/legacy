@@ -4,12 +4,13 @@ import Seo from "../components/seo";
 
 const NotFoundPage: React.FC<PageProps> = () => {
   return (
-    <main>
-      <h1>Page not found</h1>
-    </main>
+    <>
+      <Seo title="Designed AI" />
+      <main>
+        <h1>Page not found</h1>
+      </main>
+    </>
   );
 };
 
 export default NotFoundPage;
-
-export const Head = <Seo title="Designed AI" />;
