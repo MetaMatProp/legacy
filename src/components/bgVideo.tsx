@@ -4,24 +4,20 @@ import video from "../assets/video.mp4";
 
 const BgVideo = () => {
   return (
-    <StyledVideoWrapper>
-      <StyledVideo autoPlay muted loop>
-        <source src={video} />
-      </StyledVideo>
-    </StyledVideoWrapper>
+    <StyledVideo autoPlay muted loop>
+      <source src={video} />
+    </StyledVideo>
   );
 };
 
-const StyledVideoWrapper = styled.div`
+const StyledVideo = styled.video`
   position: absolute;
   top: 0;
   width: 100vw;
   height: 100vh;
+  object-fit: cover;
   overflow: hidden;
-`;
-
-const StyledVideo = styled.video`
-  min-width: 100%;
+  z-index: -1;
 `;
 
 export default BgVideo;

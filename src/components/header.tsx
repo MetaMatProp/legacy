@@ -49,7 +49,7 @@ const Header = () => {
 };
 
 const HeaderWrapper = styled.div`
-  position: fixed;
+  position: absolute;
   background-color: rgba(0, 0, 0, 0.66);
   top: 0;
   left: 0;
@@ -61,16 +61,24 @@ const StyledHeader = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 30px 100px;
-  @media (max-width: 700px) {
-    padding: 30px;
+  max-width: 1300px;
+  padding: 30px;
+  margin: 0 auto;
+  @media (max-width: 1400px) {
+    max-width: 900px;
   }
-  @media (max-width: 550px) {
+  @media (max-width: 1000px) {
+    max-width: 700px;
+  }
+  @media (max-width: 800px) {
+    max-width: 500px;
+  }
+  @media (max-width: 600px) {
     flex-direction: column;
     align-items: flex-start;
     padding: 20px;
   }
-  @media (max-width: 320px) {
+  @media (max-width: 340px) {
     padding: 20px 10px;
   }
 `;

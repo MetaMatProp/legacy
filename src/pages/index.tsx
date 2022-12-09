@@ -1,19 +1,36 @@
-import * as React from "react";
-import type { PageProps } from "gatsby";
+import React from "react";
+import styled from "styled-components";
 import Seo from "../components/seo";
 import Header from "../components/header";
 import IntroSection from "../sections/intro";
+import DescriptionSection from "../sections/description";
 
-const IndexPage: React.FC<PageProps> = () => {
+const IndexPage = () => {
   return (
     <>
       <Seo title="Designed AI" />
-      <main>
-        <Header />
+      <Header />
+      <StyledMain>
         <IntroSection />
-      </main>
+        <DescriptionSection />
+      </StyledMain>
     </>
   );
 };
+
+const StyledMain = styled.main`
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 100vh;
+  &::-webkit-scrollbar {
+    width: 4px;
+    background-color: #06141c;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    background: #ccc;
+  }
+`;
 
 export default IndexPage;
