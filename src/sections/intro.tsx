@@ -35,21 +35,21 @@ const StyledTitleWrapper = styled.div`
   height: calc(100vh - 100px);
   @media (max-width: 1024px) {
     margin: 0 100px;
+    width: 100%;
   }
   @media (max-width: 700px) {
     margin: 0 30px;
-    width: 100%;
   }
 `;
 
 const StyledTitle = styled.h1`
   color: #ffffff;
-  font-size: 40px;
+  font-size: 2.4rem;
 `;
 
 const StyledSubTitle = styled.h3`
   color: #ffffff;
-  font-size: 20px;
+  font-size: 1.2rem;
   font-weight: normal;
 `;
 
