@@ -1,16 +1,15 @@
 import React, { useEffect, useState } from "react";
 import { throttle } from "lodash";
 import styled from "styled-components";
+import { MdKeyboardArrowDown, MdKeyboardArrowUp } from "react-icons/md";
 import Box from "./box";
+import { StyledTitle } from "./StyledText";
 import { Link } from "gatsby";
 
-const buttonStyle = (minimize: boolean) => {
-  return {
-    margin: minimize ? "0px 5px" : "0px 10px",
-    padding: minimize ? "8px 18px" : undefined,
-    bgColor: "#0D4343",
-    fontColor: "#ffffff",
-  };
+const buttonStyle = {
+  margin: "0px 20px 0 0",
+  bgColor: "#0D4343",
+  fontColor: "#ffffff",
 };
 
 const linkStyle = {
@@ -18,32 +17,60 @@ const linkStyle = {
 };
 
 const Header = () => {
-  const [minimize, setMinimize] = useState(false);
+  const [mobile, setMobile] = useState(false);
+  const [menuActive, setMenuActive] = useState(false);
   useEffect(() => {
     const handleResize = () => {
       const { innerWidth } = window;
-      if (innerWidth < 310) setMinimize(true);
-      else setMinimize(false);
+      if (innerWidth < 740) setMobile(true);
+      else setMobile(false);
     };
     const throttledHandleResize = throttle(handleResize, 100);
     window.addEventListener("resize", throttledHandleResize);
+    handleResize();
     return () => window.removeEventListener("resize", throttledHandleResize);
   }, []);
+  const Buttons = () => {
+    return (
+      <ButtonWrapper>
+        <Link to="features" style={linkStyle}>
+          <Box styles={buttonStyle}>Performance</Box>
+        </Link>
+        <Link to="performance" style={linkStyle}>
+          <Box styles={buttonStyle}>Performance</Box>
+        </Link>
+      </ButtonWrapper>
+    );
+  };
   return (
     <HeaderWrapper>
       <StyledHeader>
         <Link to="/" style={linkStyle}>
-          <StyledH1>Designed AI</StyledH1>
+          <StyledTitle>Designed AI</StyledTitle>
         </Link>
-        <ButtonWrapper>
-          <Link to="features" style={linkStyle}>
-            <Box text="Features" styles={buttonStyle(minimize)} />
-          </Link>
-          <Link to="performance" style={linkStyle}>
-            <Box text="Performance" styles={buttonStyle(minimize)} />
-          </Link>
-        </ButtonWrapper>
+        {mobile ? (
+          menuActive ? (
+            <MdKeyboardArrowUp
+              color="#fff"
+              size={36}
+              onClick={() => setMenuActive(false)}
+            />
+          ) : (
+            <MdKeyboardArrowDown
+              color="#fff"
+              size={36}
+              onClick={() => setMenuActive(true)}
+            />
+          )
+        ) : (
+          <Buttons />
+        )}
       </StyledHeader>
+      {mobile && menuActive && (
+        <BottomButtonWrapper>
+          <Buttons />
+        </BottomButtonWrapper>
+      )}
     </HeaderWrapper>
   );
 };
@@ -62,34 +89,24 @@ const StyledHeader = styled.header`
   align-items: center;
   justify-content: space-between;
   max-width: 1300px;
-  padding: 30px;
+  padding: 15px 100px;
   margin: 0 auto;
-  @media (max-width: 1400px) {
-    max-width: 900px;
+  @media (max-width: 740px) {
+    padding: 0 50px;
   }
-  @media (max-width: 1000px) {
-    max-width: 700px;
-  }
-  @media (max-width: 800px) {
-    max-width: 500px;
-  }
-  @media (max-width: 600px) {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 20px;
-  }
-  @media (max-width: 340px) {
-    padding: 20px 10px;
+  @media (max-width: 420px) {
+    padding: 0 30px;
   }
 `;
 
-const StyledH1 = styled.h1`
-  color: #ffffff;
-  font-family: Inter;
-  font-size: 1.8rem;
-  font-weight: bold;
-  @media (max-width: 550px) {
-    margin: 0 0 30px 10px;
+const BottomButtonWrapper = styled.header`
+  display: flex;
+  align-items: center;
+  @media (max-width: 740px) {
+    padding: 0 50px 10px 50px;
+  }
+  @media (max-width: 420px) {
+    padding: 0 30px 10px 30px;
   }
 `;
 
