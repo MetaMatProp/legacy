@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import BgVideo from "../components/bgVideo";
-import { StyledTitle, StyledSubTitle } from "../components/StyledText";
+import { StyledTitle, StyledSubTitle } from "../components/text";
 
 const IntroSection = () => {
   return (

@@ -4,6 +4,7 @@ import Seo from "../components/seo";
 import Header from "../components/header";
 import IntroSection from "../sections/intro";
 import DescriptionSection from "../sections/description";
+import ContactSection from "../sections/contact";
 
 const IndexPage = () => {
   return (
@@ -13,6 +14,7 @@ const IndexPage = () => {
       <StyledMain>
         <IntroSection />
         <DescriptionSection />
+        <ContactSection />
       </StyledMain>
     </>
   );

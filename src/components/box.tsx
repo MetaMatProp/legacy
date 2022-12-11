@@ -10,6 +10,9 @@ interface BoxStyles {
   height?: string;
   fontWeight?: "normal" | "bold";
   textAlign?: string;
+  alignItems?: string;
+  justifyContent?: string;
+  flexDirection?: string;
 }
 
 interface BoxProps {
@@ -23,8 +26,8 @@ const Box = ({ children, styles }: BoxProps) => {
 
 const StyledBox = styled.div<BoxStyles>`
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: ${(props) => props.alignItems || "center"};
+  justify-content: ${(props) => props.justifyContent || "center"};
   background-color: ${(props) => props.bgColor || "#D9D9D9"};
   padding: ${(props) => props.padding || "8px 25px"};
   border-radius: 10px;
@@ -35,6 +38,7 @@ const StyledBox = styled.div<BoxStyles>`
   font-weight: ${(props) => props.fontWeight || "normal"};
   margin: ${(props) => props.margin};
   text-align: ${(props) => props.textAlign};
+  flex-direction: ${(props) => props.flexDirection};
 `;
 
 export default Box;

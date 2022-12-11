@@ -4,7 +4,7 @@ import {
   StyledTitle,
   StyledSubTitle,
   StyledDescription,
-} from "../components/StyledText";
+} from "../components/text";
 import Box from "../components/box";
 
 const boxStyle = {
@@ -17,7 +17,7 @@ const DescriptionSection = () => {
   return (
     <StyledDescriptionSection>
       <StyledInnerWrapper>
-        <StyledTitle>MetaMatProp</StyledTitle>
+        <StyledTitle marginBottom="0">MetaMatProp</StyledTitle>
         <StyledSubTitle>
           MetaMatProp (Meta Matrix Propagation) is an unique high-performance
           matrix computation framework implemented by C++ template
@@ -78,14 +78,14 @@ const StyledDescriptionSection = styled.section`
 const StyledInnerWrapper = styled.div`
   display: flex;
   max-width: 1300px;
-  padding: 150px 100px;
+  padding: 120px 100px;
   margin: 0 auto;
   flex-direction: column;
   @media (max-width: 740px) {
-    padding: 150px 50px;
+    padding: 100px 50px 0 50px;
   }
   @media (max-width: 420px) {
-    padding: 150px 30px;
+    padding: 100px 30px 0 30px;
   }
 `;
 

@@ -3,7 +3,7 @@ import { throttle } from "lodash";
 import styled from "styled-components";
 import { MdKeyboardArrowDown, MdKeyboardArrowUp } from "react-icons/md";
 import Box from "./box";
-import { StyledTitle } from "./StyledText";
+import { StyledTitle } from "./text";
 import { Link } from "gatsby";
 
 const buttonStyle = {
