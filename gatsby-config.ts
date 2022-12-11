@@ -7,7 +7,11 @@ const config: GatsbyConfig = {
     description: `Startup building the innovative computation technologies for Artificial Intelligence`,
   },
   graphqlTypegen: true,
-  plugins: [],
+  plugins: [
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
+  ],
 };
 
 export default config;
