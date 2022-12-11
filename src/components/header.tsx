@@ -33,10 +33,10 @@ const Header = () => {
   const Buttons = () => {
     return (
       <ButtonWrapper>
-        <Link to="features" style={linkStyle}>
-          <Box styles={buttonStyle}>Performance</Box>
+        <Link to="/features" style={linkStyle}>
+          <Box styles={buttonStyle}>Features</Box>
         </Link>
-        <Link to="performance" style={linkStyle}>
+        <Link to="/performance" style={linkStyle}>
           <Box styles={buttonStyle}>Performance</Box>
         </Link>
       </ButtonWrapper>
