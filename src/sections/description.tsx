@@ -9,6 +9,8 @@ import Box from "../components/box";
 
 const boxStyle = {
   width: "auto",
+  padding: "15px 25px",
+  minHeight: "70px",
   height: "100%",
   textAlign: "center",
 };
@@ -104,8 +106,7 @@ const StyledBoxesWrapper = styled.div`
   width: 100%;
   grid-template-columns: repeat(2, 1fr);
   grid-auto-columns: 1fr;
-  row-gap: 30px;
-  column-gap: 15px;
+  gap: 15px;
   @media (max-width: 900px) {
     grid-template-columns: repeat(1, 1fr);
     margin: 0 0 30px 0;
