@@ -5,13 +5,17 @@ import Header from "../components/header";
 import IntroSection from "../sections/intro";
 import DescriptionSection from "../sections/description";
 import ContactSection from "../sections/contact";
+import BgVideo from "../components/bgVideo";
+import StyledTriangle from "../components/triangle";
 
 const IndexPage = () => {
   return (
     <>
       <Seo title="Designed AI" />
       <Header />
+      <BgVideo />
       <StyledMain>
+        <StyledTriangle top="100vh" height="200vh" />
         <IntroSection />
         <DescriptionSection />
         <ContactSection />
@@ -33,6 +37,8 @@ const StyledMain = styled.main`
     border-radius: 2px;
     background: #ccc;
   }
+  position: relative;
+  z-index: 1;
 `;
 
 export default IndexPage;

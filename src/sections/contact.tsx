@@ -67,6 +67,7 @@ const StyledBoxWrapper = styled.div`
     max-width: 100%;
     min-width: 0;
   }
+  z-index: 99;
 `;
 
 export default ContactSection;

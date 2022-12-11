@@ -6,7 +6,7 @@ import { StyledTitle, StyledSubTitle } from "../components/text";
 const IntroSection = () => {
   return (
     <StyledIntroSection>
-      <BgVideo />
+      {/* <BgVideo /> */}
       <StyledTitleWrapper>
         <StyledTitle>Designed AI</StyledTitle>
         <StyledSubTitle>

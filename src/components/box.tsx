@@ -42,6 +42,7 @@ const StyledBox = styled.div<BoxStyles>`
   margin: ${(props) => props.margin};
   text-align: ${(props) => props.textAlign};
   flex-direction: ${(props) => props.flexDirection};
+  z-index: 99;
 `;
 
 export default Box;

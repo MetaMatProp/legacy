@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Seo from "../components/seo";
 import Header from "../components/header";
 import PerformanceSection from "../sections/performance";
+import StyledTriangle from "../components/triangle";
 
 const PerformancePage = () => {
   return (
@@ -10,6 +11,7 @@ const PerformancePage = () => {
       <Seo title="Designed AI" />
       <Header />
       <StyledMain>
+        <StyledTriangle />
         <PerformanceSection />
       </StyledMain>
     </>

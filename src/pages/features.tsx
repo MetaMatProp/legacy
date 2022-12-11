@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Seo from "../components/seo";
 import Header from "../components/header";
 import FeaturesSection from "../sections/features";
+import StyledTriangle from "../components/triangle";
 
 const FeaturesPage = () => {
   return (
@@ -10,6 +11,7 @@ const FeaturesPage = () => {
       <Seo title="Designed AI" />
       <Header />
       <StyledMain>
+        <StyledTriangle />
         <FeaturesSection />
       </StyledMain>
     </>

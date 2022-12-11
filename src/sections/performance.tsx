@@ -26,6 +26,7 @@ const PerformanceSection = () => {
           src="../assets/performance.png"
           alt="performance"
           placeholder="blurred"
+          style={{ zIndex: 99 }}
         />
       </StyledInnerWrapper>
     </StyledContactSection>
