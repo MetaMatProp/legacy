@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkdesigned_ai=self.webpackChunkdesigned_ai||[]).push([[218],{2513:function(e,n,t){t.r(n);var l=t(7294),a=t(2825);n.default=()=>l.createElement(l.Fragment,null,l.createElement(a.Z,{title:"Designed AI"}),l.createElement("main",null,l.createElement("h1",null,"Page not found")))}}]);
+//# sourceMappingURL=component---src-pages-404-tsx-4234ceca8c3ac4c89428.js.map
