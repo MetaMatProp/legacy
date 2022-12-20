@@ -24,4 +24,4 @@ const StyledTriangle = styled.div<TriangleProps>`
   }
 `;
 
-export default StyledTriangle;
+export default Triangle;

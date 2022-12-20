@@ -19,6 +19,7 @@ const FeaturesPage = () => {
 };
 
 const StyledMain = styled.main`
+  position: relative;
   overflow-y: scroll;
   overflow-x: hidden;
   height: 100vh;
