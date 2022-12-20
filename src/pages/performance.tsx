@@ -7,19 +7,23 @@ import StyledTriangle from "../components/triangle";
 
 const PerformancePage = () => {
   return (
-    <>
+    <StyledWrapper>
       <Seo title="Designed AI" />
       <Header />
+      <StyledTriangle />
       <StyledMain>
-        <StyledTriangle />
         <PerformanceSection />
       </StyledMain>
-    </>
+    </StyledWrapper>
   );
 };
 
-const StyledMain = styled.main`
+const StyledWrapper = styled.div`
   position: relative;
+  overflow: hidden;
+`;
+
+const StyledMain = styled.main`
   overflow-y: scroll;
   overflow-x: hidden;
   height: 100vh;
