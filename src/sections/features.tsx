@@ -54,10 +54,7 @@ const FeaturesSection = () => {
             title="Support General N-demensional Matrix"
             subscription="Provide unified Matrix interface for general N-dimensional Matrix and various data types"
           />
-          <Feature
-            title="C++ Standard Template Library Interface"
-            subscription="Support Iterator Interface for Matrix compatible with C++ STL algorithms"
-          />
+          <Feature title="C++ Standard Template Library Interface" subscription="Support Iterator Interface for Matrix compatible with C++ STL algorithms" />
         </StyledBoxesWrapper>
       </StyledInnerWrapper>
     </StyledDescriptionSection>
@@ -77,7 +74,7 @@ const StyledInnerWrapper = styled.div`
   max-width: 1300px;
   width: -webkit-fill-available;
   padding: 120px 100px;
-  margin: 0 auto;
+  margin: 0 auto 150px auto;
   flex-direction: column;
   @media (max-width: 740px) {
     padding: 100px 50px 0 50px;

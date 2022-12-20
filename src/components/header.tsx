@@ -3,7 +3,7 @@ import { throttle } from "lodash";
 import styled from "styled-components";
 import { MdKeyboardArrowDown, MdKeyboardArrowUp } from "react-icons/md";
 import Box from "./box";
-import { StyledTitle } from "./text";
+import { StyledTitle, StyledLogo } from "./text";
 import { Link } from "gatsby";
 
 const buttonStyle = {
@@ -46,21 +46,13 @@ const Header = () => {
     <HeaderWrapper>
       <StyledHeader>
         <Link to="/" style={linkStyle}>
-          <StyledTitle>Designed AI</StyledTitle>
+          <StyledLogo>Designed AI</StyledLogo>
         </Link>
         {mobile ? (
           menuActive ? (
-            <MdKeyboardArrowUp
-              color="#fff"
-              size={36}
-              onClick={() => setMenuActive(false)}
-            />
+            <MdKeyboardArrowUp color="#fff" size={36} onClick={() => setMenuActive(false)} />
           ) : (
-            <MdKeyboardArrowDown
-              color="#fff"
-              size={36}
-              onClick={() => setMenuActive(true)}
-            />
+            <MdKeyboardArrowDown color="#fff" size={36} onClick={() => setMenuActive(true)} />
           )
         ) : (
           <Buttons />

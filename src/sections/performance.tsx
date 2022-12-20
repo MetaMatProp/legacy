@@ -18,16 +18,10 @@ const PerformanceSection = () => {
       <StyledInnerWrapper>
         <StyledTitle marginBottom="0">Performance</StyledTitle>
         <StyledSubTitle>
-          For Multi-threaded CPU Computing Environment, MetaMatProp can achieve
-          the order of faster computing speed and two~three times less memory
-          consumption than Armadillo, Matlab, and Tensorflow.
+          For Multi-threaded CPU Computing Environment, MetaMatProp can achieve the order of faster computing speed and two~three times less memory consumption
+          than Armadillo, Matlab, and Tensorflow.
         </StyledSubTitle>
-        <StaticImage
-          src="../assets/performance.png"
-          alt="performance"
-          placeholder="blurred"
-          style={{ zIndex: 99 }}
-        />
+        <StaticImage src="../assets/performance.png" alt="performance" placeholder="blurred" style={{ zIndex: 99 }} />
       </StyledInnerWrapper>
     </StyledContactSection>
   );
@@ -45,7 +39,7 @@ const StyledInnerWrapper = styled.div`
   max-width: 1300px;
   width: 100%;
   padding: 120px 100px;
-  margin: 0 auto;
+  margin: 0 auto 150px auto;
   flex-direction: column;
   @media (max-width: 740px) {
     padding: 100px 50px 0 50px;

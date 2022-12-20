@@ -1,10 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import {
-  StyledTitle,
-  StyledSubTitle,
-  StyledDescription,
-} from "../components/text";
+import { StyledTitle, StyledSubTitle, StyledDescription } from "../components/text";
 import Box from "../components/box";
 
 const boxStyle = {
@@ -21,47 +17,35 @@ const DescriptionSection = () => {
       <StyledInnerWrapper>
         <StyledTitle marginBottom="0">MetaMatProp</StyledTitle>
         <StyledSubTitle>
-          MetaMatProp (Meta Matrix Propagation) is an unique high-performance
-          matrix computation framework implemented by C++ template
-          metaprogramming for machine learning and other scientific computing
+          MetaMatProp (Meta Matrix Propagation) is an unique high-performance matrix computation framework implemented by C++ template metaprogramming for
+          machine learning and other scientific computing
         </StyledSubTitle>
         <StyledDescriptionWrapper>
           <StyledFeaturesWrapper>
             <StyledDescription>
-              The MetaMatProp can achieve faster matrix operations with lesser
-              system memory consumption compared with existing top-level
-              products such as Mathwork’s Matlab, Google’s Tensorflow, and
-              open-sourced Armadillo.
+              The MetaMatProp can achieve faster matrix operations with lesser system memory consumption compared with existing top-level products such as
+              Mathwork’s Matlab, Google’s Tensorflow, and open-sourced Armadillo.
             </StyledDescription>
             <StyledDescription>
-              The MetaMatProp is fully implemented by template meta-programming
-              and it achieves several unique features by template
-              meta-programming, which are hard to come all together with the
-              previous existing ones.
+              The MetaMatProp is fully implemented by template meta-programming and it achieves several unique features by template meta-programming, which are
+              hard to come all together with the previous existing ones.
             </StyledDescription>
             <StyledDescription>
-              We believe that our MetaMatProp will be an innovative framework
-              promoting the productivity as well as reducing the cost over the
-              entire application development cycles, which include initial
-              prototype implementation, extension, deployment, and maintenance,
-              in the computation-intensive areas like as machine learning,
-              finance, and many other scientific work for the purpose of
-              research as well as commercial product.
+              We believe that our MetaMatProp will be an innovative framework promoting the productivity as well as reducing the cost over the entire
+              application development cycles, which include initial prototype implementation, extension, deployment, and maintenance, in the
+              computation-intensive areas like as machine learning, finance, and many other scientific work for the purpose of research as well as commercial
+              product.
             </StyledDescription>
           </StyledFeaturesWrapper>
           <StyledBoxesWrapper>
-            <Box styles={boxStyle}>
-              Intuitive High-level Programming Interface like Matlab
-            </Box>
+            <Box styles={boxStyle}>Intuitive High-level Programming Interface like Matlab</Box>
             <Box styles={boxStyle}>Minimal Third-party Dependency</Box>
             <Box styles={boxStyle}>Compile-time Expression Optimizaion</Box>
             <Box styles={boxStyle}>Support General N-dimensional Matrix</Box>
             <Box styles={boxStyle}>Support C++ STL Interface</Box>
             <Box styles={boxStyle}>Direct Application Deployment</Box>
             <Box styles={boxStyle}>Multi-threaded</Box>
-            <Box styles={boxStyle}>
-              Support BLAS (Atlas, OpenBlas, MKL-Blas)
-            </Box>
+            <Box styles={boxStyle}>Support BLAS (Atlas, OpenBlas, MKL-Blas)</Box>
           </StyledBoxesWrapper>
         </StyledDescriptionWrapper>
       </StyledInnerWrapper>
@@ -81,7 +65,7 @@ const StyledInnerWrapper = styled.div`
   display: flex;
   max-width: 1300px;
   padding: 120px 100px;
-  margin: 0 auto;
+  margin: 0 auto 150px auto;
   flex-direction: column;
   @media (max-width: 740px) {
     padding: 100px 50px 0 50px;
