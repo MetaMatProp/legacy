@@ -3,22 +3,25 @@ import styled from "styled-components";
 
 interface TextInputProps {
   placeholder?: string;
+  value?: string;
+  onChange?: React.ChangeEventHandler<HTMLInputElement | HTMLTextAreaElement>;
 }
 
 interface ButtonProps {
   value: string;
+  onClick?: React.MouseEventHandler<HTMLInputElement>;
 }
 
-export const TextInput = ({ placeholder }: TextInputProps) => {
-  return <StyledInput type={"text"} placeholder={placeholder} />;
+export const TextInput = ({ placeholder, value, onChange }: TextInputProps) => {
+  return <StyledInput type={"text"} placeholder={placeholder} value={value} onChange={onChange} />;
 };
 
-export const TextArea = ({ placeholder }: TextInputProps) => {
-  return <StyledTextArea placeholder={placeholder} />;
+export const TextArea = ({ placeholder, value, onChange }: TextInputProps) => {
+  return <StyledTextArea placeholder={placeholder} value={value} onChange={onChange} />;
 };
 
-export const Button = ({ value }: ButtonProps) => {
-  return <StyledButton type={"button"} value={value} />;
+export const Button = ({ value, onClick }: ButtonProps) => {
+  return <StyledButton type={"button"} value={value} onClick={onClick} />;
 };
 
 const StyledInput = styled.input`
