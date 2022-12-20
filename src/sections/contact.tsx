@@ -63,8 +63,8 @@ const StyledInnerWrapper = styled.div`
   display: flex;
   max-width: 1300px;
   width: 100%;
-  padding: 120px 100px;
-  margin: 0 auto 150px auto;
+  padding: 0 100px;
+  margin: 0 auto;
   flex-direction: column;
   @media (max-width: 740px) {
     padding: 100px 50px 0 50px;
